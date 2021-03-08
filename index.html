@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="nav1s">
     <div class="container">
       <div class="header__logo">
         <a href="index.html">
@@ -257,54 +257,57 @@
         <div class="calculator__item">
           <h5 class="calculator__item-title">Помещение</h5>
           <div class="calculator__item-row">
-            <p>Длина</p>
+            <p>Длина (метр)</p>
             <div class="cart">
               <div class="cart__add-item">
-                <button class="cart-button cart-button--less">-</button>
-                <div class="cart-quantity">15</div>
+                <button class="cart-button cart-button--less not0">-</button>
+                <input class="cart-quantity" type="number" id="a1" value="1" min="1"></input>
                 <button class="cart-button cart-button--more">+</button>
               </div>
             </div>
           </div>
           <div class="calculator__item-row">
-            <p>Ширина</p>
+            <p>Ширина (метр)</p>
             <div class="cart">
               <div class="cart__add-item">
-                <button class="cart-button cart-button--less">-</button>
-                <div class="cart-quantity">5</div>
+                <button class="cart-button cart-button--less not0">-</button>
+                <input class="cart-quantity" type="number" id="a2" value="1" min="1"></input>
                 <button class="cart-button cart-button--more">+</button>
               </div>
             </div>
+          </div>
+          <div class="calculator__item-row">
+            <p class="text-center">Метров <sup>2</sup>  в сумме &nbsp;<span id="a3"></span></p>
           </div>
         </div>
         <div class="calculator__item">
           <h5 class="calculator__item-title">Элементы, шт</h5>
           <div class="calculator__item-row">
-            <p>Углы</p>
+            <p>Внешний угол</p>
             <div class="cart">
               <div class="cart__add-item">
                 <button class="cart-button cart-button--less">-</button>
-                <div class="cart-quantity">4</div>
+                <input class="cart-quantity" type="number" id="b1" value="0" min="0"></input>
                 <button class="cart-button cart-button--more">+</button>
               </div>
             </div>
           </div>
           <div class="calculator__item-row">
-            <p>Лампы</p>
+            <p>Точечный светильник</p>
             <div class="cart">
               <div class="cart__add-item">
                 <button class="cart-button cart-button--less">-</button>
-                <div class="cart-quantity">6</div>
+                <input class="cart-quantity" type="number" id="b2" value="0" min="0"></input>
                 <button class="cart-button cart-button--more">+</button>
               </div>
             </div>
           </div>
           <div class="calculator__item-row">
-            <p>Трубы</p>
+            <p>Обход трубы</p>
             <div class="cart">
               <div class="cart__add-item">
                 <button class="cart-button cart-button--less">-</button>
-                <div class="cart-quantity">1</div>
+                <input class="cart-quantity" type="number" id="b3" value="0" min="0"></input>
                 <button class="cart-button cart-button--more">+</button>
               </div>
             </div>
@@ -313,46 +316,40 @@
         <div class="calculator__item">
           <h5 class="calculator__item-title">Материалы и цвет</h5>
           <div class="calculator__item-content">
-            <div class="content-item">
-              <form class="calculator__item-row">
-                <label class="label label--margin">ПВХ
-                  <input type="radio" checked="checked" name="radio">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="label">Ткань
-                  <input type="radio" name="radio">
-                  <span class="checkmark"></span>
-                </label>
-              </form>
-            </div>
-            <div class="content-item">
-              <form class="calculator__item-row">
-                <label class="label">Белый
-                  <input type="radio" checked="checked" name="radio">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="label">Цветной
-                  <input type="radio" name="radio">
-                  <span class="checkmark"></span>
-                </label>
-              </form>
-            </div>
+<!--            <div class="content-item">-->
+<!--              <form class="calculator__item-row">-->
+<!--                <label class="label label&#45;&#45;margin">ПВХ-->
+<!--                  <input type="radio" checked="checked" name="radio" id="c1">-->
+<!--                  <span class="checkmark"></span>-->
+<!--                </label>-->
+<!--                <label class="label">Ткань-->
+<!--                  <input type="radio" name="radio" id="c2">-->
+<!--                  <span class="checkmark"></span>-->
+<!--                </label>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--            <div class="content-item">-->
+<!--              <form class="calculator__item-row">-->
+<!--                <label class="label">Белый-->
+<!--                  <input type="radio" checked="checked" name="radio" id="c3">-->
+<!--                  <span class="checkmark"></span>-->
+<!--                </label>-->
+<!--                <label class="label">Цветной-->
+<!--                  <input type="radio" name="radio" id="c4">-->
+<!--                  <span class="checkmark"></span>-->
+<!--                </label>-->
+<!--              </form>-->
+<!--            </div>-->
             <div class="content-item">
               <form action="#">
-                <select name="type">
-                  <option value="value1" selected>Глянцевый</option>
-                  <option value="value2">Матовый</option>
-                  <option value="value3">Тканевый</option>
-                  <option value="value4">Фактурный</option>
-                  <option value="value5">Сатиновый</option>
-                  <option value="value6">Фотопечать</option>
+                <select name="type" id="d1">
                 </select>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <h4 class="calculator__total">Стоимость: <span>13 900 р</span></h4>
+      <h4 class="calculator__total">Стоимость: <span id="total_price">770</span> рублей</h4>
       <button class="button--call" id="callBtn2" type="submit">вызвать специалиста</button>
     </div>
   </section>

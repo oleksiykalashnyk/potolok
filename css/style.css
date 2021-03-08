@@ -68,6 +68,7 @@ body {
 }
 .header {
   position: fixed;
+  display: block;
   z-index: 50;
   left: 0;
   right: 0;
@@ -605,4 +606,26 @@ select:focus {
 .footer p {
   color: #ffffff;
   text-align: center;
+}
+/*Скрываем стрелочки у инпутов с типом номер*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.text-center{
+  width: 100%;
+  text-align: center;
+}
+#a3{
+  font-weight: 500;
+}
+#nav1s{
+  transition: 1s all;
 }
